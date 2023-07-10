@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { queryClient } from "../components/AppProviders";
+// import { queryClient } from "../components/AppProviders";
 
 export const supabase = {};
 
