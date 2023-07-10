@@ -9,8 +9,15 @@ import GlobalStyle from "../styles/GlobalStyle";
 import { darkTheme } from "../styles/theme";
 import ErrorFallback from "./ErrorFallback";
 
-function AppProviders() {
-  return null;
+function AppProviders({ children }) {
+  return (
+    <BrowserRouter>
+      <ThemeProvider theme={darkTheme}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    </BrowserRouter>
+  );
 }
 
 export default AppProviders;

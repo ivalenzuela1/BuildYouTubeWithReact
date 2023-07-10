@@ -20,9 +20,9 @@ import Container from "./styles/Container";
 function App() {
   return (
     <>
-      {/* Navbar */}
-      {/* Sidebar */}
-      {/* MobileNavbar */}
+      <Navbar />
+      <Sidebar />
+      <MobileNavbar />
       <Container>{/* Routes */}</Container>
     </>
   );
