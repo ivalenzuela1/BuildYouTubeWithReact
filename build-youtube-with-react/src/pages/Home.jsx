@@ -9,7 +9,9 @@ import { getVideos } from "../utils/supabase";
 function Home() {
   return (
     <Wrapper>
-      <VideoGrid>{/* Display Videos */}</VideoGrid>
+      <VideoGrid>
+        <div>Home</div>
+      </VideoGrid>
     </Wrapper>
   );
 }
