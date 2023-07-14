@@ -23,7 +23,21 @@ function App() {
       <Navbar />
       <Sidebar />
       <MobileNavbar />
-      <Container>{/* Routes */}</Container>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/watch/:videoId" element={<WatchVideo />} />
+          <Route path="/channel/:channelId" element={<Channel />} />
+          <Route path="/results/:searchQuery" element={<SearchResults />} />
+          <Route path="/feed/trending" element={<Trending />} />
+          <Route path="/feed/subscriptions" element={<Subscriptions />} />
+          <Route path="/feed/library" element={<Library />} />
+          <Route path="/feed/history" element={<History />} />
+          <Route path="/feed/my_video" element={<MyVideos />} />
+          <Route path="/feed/liked_videos" element={<LikedVideos />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Container>
     </>
   );
 }
