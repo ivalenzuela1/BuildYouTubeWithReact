@@ -18,10 +18,21 @@ import WatchVideo from "./pages/WatchVideo";
 import Container from "./styles/Container";
 
 function App() {
+  const [isSidebarOpen, setSidebarOpen] = React.useState(false);
+  useLocationChange(handleCloseSidebar);
+
+  function handleCloseSidebar() {
+    setSidebarOpen(false);
+  }
+
+  function handleToggleSidebar() {
+    setSidebarOpen(!isSidebarOpen);
+  }
+
   return (
     <>
-      <Navbar />
-      <Sidebar />
+      <Navbar handleToggleSidebar={handleToggleSidebar} />
+      <Sidebar isSidebarOpen={isSidebarOpen} />
       <MobileNavbar />
       <Container>
         <Routes>
