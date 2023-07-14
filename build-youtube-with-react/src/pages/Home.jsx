@@ -10,7 +10,7 @@ function Home() {
   return (
     <Wrapper>
       <VideoGrid>
-        <div>Home Page</div>
+        <div>Home Page2</div>
       </VideoGrid>
     </Wrapper>
   );
