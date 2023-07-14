@@ -13,9 +13,9 @@ import {
 import SidebarAuth from "./SidebarAuth";
 import Subscriptions from "./Subscriptions";
 
-function Sidebar() {
+function Sidebar({ isSidebarOpen }) {
   return (
-    <Wrapper open={true}>
+    <Wrapper open={isSidebarOpen}>
       <NavLink to="/" activeClassName="active">
         <div className="icon">
           <HomeIcon />
