@@ -9,9 +9,20 @@ export function signInWithGoogle() {
   supabase.auth.signInWithOAuth({ provider: "google" });
 }
 
-export function signOut() {}
+export async function signOut() {
+  await supabase.auth.signOut();
+  window.location.reload();
+}
 
-export function getCurrentProfile() {}
+export async function getCurrentProfile(userId) {
+  let { data: profile } = await supabase
+    .from("profile")
+    .select("*")
+    .eq("user_id", userId)
+    .single();
+
+  return profile;
+}
 
 export function getVideos() {}
 
