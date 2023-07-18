@@ -18,5 +18,7 @@ export function AuthProvider({ children }) {
     });
   }, []);
 
-  return <AuthContext.Provider value>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={profile}>{children}</AuthContext.Provider>
+  );
 }
